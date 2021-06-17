@@ -1,13 +1,20 @@
 import React from "react";
-import { Checkbox } from "antd";
+import { Input } from "antd";
 
-const ItemContent = ({ data }) => {
+const ItemContent = ({ data, level }) => {
   const onChange = (e) => {
     console.log(`checked = ${e.target.checked}`);
   };
+  console.log("level", level);
+  const bg_color =
+    level === "easy"
+      ? "bg-yellow"
+      : level === "medium"
+      ? "bg-orange"
+      : "bg-red";
   return (
-    <div className="flex w-full">
-      <div className="w-16 bg-yellow-300 flex-shrink-0 ">
+    <div className="flex w-full my-1">
+      <div className={`w-16 ${bg_color} flex-shrink-0 `}>
         <label className="inline-flex items-center  cursor-pointer w-full h-full bg-yellow-400 p-3 lex justify-center  focus:ring-0">
           <input
             type="checkbox"
@@ -17,8 +24,11 @@ const ItemContent = ({ data }) => {
           />
         </label>
       </div>
-      <div className="w-full bg-white p-2">
-        <p>a</p>
+      <div className="w-full bg-white p-2  focus-within:bg-gray-50">
+        <Input
+          defaultValue="Ant Design love you "
+          className="border-none outline-none w-full border-red-600 focus:bg-gray-50"
+        />
       </div>
     </div>
   );

@@ -1,3 +1,28 @@
+/* remove style default input antd */
+:root {
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+}
+
+.ant-input:focus {
+  border: none !important;
+  border-bottom: 1px solid white !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:focus,
+.ant-select-selector:active,
+.ant-select-open .ant-select-selector {
+  border-color: #d9d9d9 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
 @tailwind base;
 
 @tailwind components;

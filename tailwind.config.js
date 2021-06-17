@@ -9,6 +9,9 @@ module.exports = {
       },
       backgroundColor: {
         brown: "rgba(26,24,29,.06)",
+        orange: "#fd7e14",
+        yellow: "#ffbe5d",
+        red: "#dc3545",
       },
     },
   },
